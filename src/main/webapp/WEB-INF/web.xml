@@ -1,6 +1,6 @@
 <!DOCTYPE web-app PUBLIC
- "-//Sun Microsystems, Inc.//DTD Web Application 2.3//EN"
- "http://java.sun.com/dtd/web-app_2_3.dtd" >
+		"-//Sun Microsystems, Inc.//DTD Web Application 2.3//EN"
+		"http://java.sun.com/dtd/web-app_2_3.dtd" >
 
 <web-app>
 
@@ -8,14 +8,34 @@
 		<listener-class>cn.demo.listener.FileUploadServletContextListener</listener-class>
 	</listener>
 
-  <servlet>
-    <servlet-name>fileUploadServlet</servlet-name>
-    <servlet-class>cn.demo.servlet.FileUploadServlet</servlet-class>
-  </servlet>
+	<servlet>
+		<servlet-name>fileUploadServlet</servlet-name>
+		<servlet-class>cn.demo.servlet.FileUploadServlet</servlet-class>
+	</servlet>
 
-  <servlet-mapping>
-    <servlet-name>fileUploadServlet</servlet-name>
-    <url-pattern>/fileUploadServlet</url-pattern>
-  </servlet-mapping>
+	<servlet>
+		<servlet-name>fileListServlet</servlet-name>
+		<servlet-class>cn.demo.servlet.FileListServlet</servlet-class>
+	</servlet>
+
+	<servlet>
+		<servlet-name>downloadServlet</servlet-name>
+		<servlet-class>cn.demo.servlet.FileDownloadServlet</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>downloadServlet</servlet-name>
+		<url-pattern>/downloadServlet</url-pattern>
+	</servlet-mapping>
+
+	<servlet-mapping>
+		<servlet-name>fileListServlet</servlet-name>
+		<url-pattern>/fileListServlet</url-pattern>
+	</servlet-mapping>
+
+	<servlet-mapping>
+		<servlet-name>fileUploadServlet</servlet-name>
+		<url-pattern>/fileUploadServlet</url-pattern>
+	</servlet-mapping>
 
 </web-app>

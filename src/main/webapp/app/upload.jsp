@@ -56,12 +56,12 @@
 
 </head>
 <body>
-
+	<h1>UPLOAD</h1>
 	<font color="red">${message }</font>
 	<br><br>
 
 
-	<form action="/fileUploadServlet" method="post" enctype="multipart/form-data">
+	<form action="/upload/fileUploadServlet" method="post" enctype="multipart/form-data">
 		
 		<table>
 			<tr class="file">
